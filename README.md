@@ -59,13 +59,13 @@ Called every time JSONPath crawls through the dataset.
 
 _note: `trace` is invoked recursively, so be careful about what you put in here. Performance will be affected on larger datasets._
 
-### onWalk(loc, expression, value, path, function)
+### onWalk(loc, expression, value, path, func)
 
 * `loc` The current "bit" of the normalized JSONPath expression.
 * `expression` The full JSONPath expression specified when invoking `find()`
 * `value` The value of the current node
 * `path` The path to the current node
-* `function` Function to apply to the current node
+* `func` Function to apply to the current node
 
 Called every time JSONPath crawls through the dataset.
 
