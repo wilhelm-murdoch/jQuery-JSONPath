@@ -24,7 +24,7 @@ This represents the JSON object you want to query.
 * Options: `VALUE | PATH`
 * Default: `VALUE`
 
-Determines the type of information to respond with. If `VALUE` is selected, it returns the matching value of the associated expression. 'PATH' will return the direct path to the matching node.
+Determines the type of information to respond with. If `VALUE` is selected, it returns the matching value of the associated expression. `PATH` will return the direct path to the matching node.
 
 ### keepHistory
 
@@ -149,7 +149,7 @@ _Example:_
 
 ## Syntax
 
-As I said before, full credit for all the hard work goes to Herr Goessner, who has full documentation on the actual querying sytnax on his [website](http://goessner.net/articles/JsonPath/).
+Full documentation on the actual querying sytnax can be found [here](http://goessner.net/articles/JsonPath/).
 
 ## Credits
 
