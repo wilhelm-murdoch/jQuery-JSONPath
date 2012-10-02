@@ -21,10 +21,15 @@ This represents the JSON object you want to query.
 ### resultType
 
 * Type: String
-* Options: `VALUE | PATH`
+* Options: `VALUE | PATH |  BOTH`
 * Default: `VALUE`
 
-Determines the type of information to respond with. If `VALUE` is selected, it returns the matching value of the associated expression. `PATH` will return the direct path to the matching node.
+Determines the type of information to respond with. If `VALUE` is selected, it returns the matching value of the associated expression. `PATH` will return the direct path to the matching node. Choosing 'BOTH' will, obviously, return both 'PATH' and associated 'VALUE', but will also change the structure of the returned items into the following:
+
+    [{
+      path: '$.path.goes[0]here',
+      value: 'OMGHAI'
+    }]
 
 ### keepHistory
 
