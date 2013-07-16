@@ -50,13 +50,13 @@ Called when a matching node has been found.
 
 ### onNormalize(expression)
 
-* `expression` The full JSONPath expression specified when invoking `find()`
+* `expression` The full JSONPath expression specified when invoking `query()`
 
 Called when JSONPath validates the specified expression.
 
 ### onTrace(expression, value, path)
 
-* `expression` The full JSONPath expression specified when invoking `find()`
+* `expression` The full JSONPath expression specified when invoking `query()`
 * `value` The value of the current node
 * `path` The path to the current node
 
@@ -67,7 +67,7 @@ _note: `trace` is invoked recursively, so be careful about what you put in here.
 ### onWalk(loc, expression, value, path, func)
 
 * `loc` The current "bit" of the normalized JSONPath expression.
-* `expression` The full JSONPath expression specified when invoking `find()`
+* `expression` The full JSONPath expression specified when invoking `query()`
 * `value` The value of the current node
 * `path` The path to the current node
 * `func` Function to apply to the current node
@@ -93,7 +93,7 @@ _Example:_
     path.options({keepHistory: true})
 
 
-### $.JSONPath(options).find(expression)
+### $.JSONPath(options).query(expression)
 
 * `expression` JSONPath expression to query the data set
 
@@ -136,7 +136,7 @@ _Example:_
 
     var path = $.JSONPath({data: json})
 
-    results = path.find('$.store.book[*].author') // returns all authors
+    results = path.query('$.store.book[*].author') // returns all authors
 
 ## Usage
 
@@ -150,7 +150,7 @@ _Example:_
       onWalk: function(loc, expression, value, path, function) {},
     })
 
-    results = path.find('$.store.book[*].author')
+    results = path.query('$.store.book[*].author')
 
 ## Syntax
 
